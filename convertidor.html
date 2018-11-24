@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		*{
+			margin: 3px;
+		}
+	</style>
+	<meta charset="UTF-8">
+	<title>Convertidor de temperatura</title>
+</head>
+<body>
+	Escala original:
+	<select id="escalaOriginal" onchange="llenarEscalaResultado()" autocomplete="off">
+		<option value="" selected>-Selecciona una temperatura-</option>
+		<option value="celsius">Celsius</option>
+		<option value="fahrenheit">Fahrenheit</option>
+		<option value="kelvin">Kelvin</option>
+		<option value="rankine">Rankine</option>
+	</select>
+	Temperatura original: <input type="text" id="tempOriginal" autocomplete="off"><br>
+
+	Escala a convertir:
+	<select id="escalaResultado" autocomplete="off">
+	</select>
+
+	<button onclick="convertir()">Convertir</button><br>
+	Resultado de la conversión: <input type="text" id="tempResultado" readonly autocomplete="off">
+
+	<script src="convertidor.js"></script>
+</body>
+</html>

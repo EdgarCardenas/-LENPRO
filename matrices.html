@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Matrices</title>
+</head>
+<body>
+   <select id="operacion" onchange="mostrarFormulario()">
+      <option value="">-Selecciona una operacion-</option>
+      <option value="suma">Suma</option>
+      <option value="multiplicacion">Multiplicacion</option>
+   </select><br><br>
+
+   <div id="suma_matrices">
+      *La suma de matrices solo se puede hacer con 2 matrices de las mismas dimensiones<br>
+      Tamaño de las matrices: <input type="text" id="size_suma" class="formulario"> <button onclick="calcularS()">Ingresar valores y calcular</button><br>
+      <div id="m1_suma" style="display: inline-block; padding:10px;"></div>
+      <div id="m2_suma" style="display: inline-block; padding:10px;"></div>
+      <div id="mR_suma" style="display: inline-block; padding:10px;"></div>    
+   </div>
+
+   <div id="multiplicacion_matrices">
+      *La multiplicacion de matrices solo se puede realizar si la cantidad de columnas de la matriz 'A' es igual a la cantidad de filas de la matriz 'B'<br>
+      Filas matriz A: <input type="text" id="fmatrizA"><br>
+      Columnas matriz A <input type="text" id="cmatrizA"><br>
+      <br>
+      Filas matriz B: <input type="text" id="fmatrizB"><br>
+      Columnas matriz B <input type="text" id="cmatrizB"><br>
+      <button onclick="calcularM()">Ingresar valores y calcular</button><br>
+      <div id="m1_multiplicacion" style="display: inline-block; padding:10px;"></div>
+      <div id="m2_multiplicacion" style="display: inline-block; padding:10px;"></div>
+      <div id="mR_multiplicacion" style="display: inline-block; padding:10px;"></div> 
+
+   </div>
+   <script src="matrices.js"></script>
+</body>
+</html>
